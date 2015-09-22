@@ -20,3 +20,11 @@ def zipcode(input):
             return {"zip": input[:5], "plus4": None}
         else:
             return {"zip": input[:5], "plus4": input[6:]}
+
+def date(input):
+    if v.date(input):
+        raw = re.split(r'[\/\-]', input)
+        raw = [int(x) for x in raw]
+        year = sorted(raw)[2]
+        del raw[raw.index(year)]
+        return {"month": raw[0], "day": raw[1], "year": year}
