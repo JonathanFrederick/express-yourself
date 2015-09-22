@@ -30,3 +30,6 @@ def phone_number(num):
 
 def money(num):
     return re.match('^\$([0-9]+(,[0-9]{3})*)(\.[0-9]{2})?$', num)
+
+def zipcode(num):
+    return re.match('^[0-9]{5}(-[0-9]{4})?$', num)
