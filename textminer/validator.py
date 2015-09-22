@@ -27,3 +27,6 @@ def words(st, count=None):
 
 def phone_number(num):
     return re.match('^\(?[0-9]{3}\)?[. -]?[0-9]{3}[-.]?[0-9]{4}$', num)
+
+def money(num):
+    return re.match('^\$([0-9]+(,[0-9]{3})*)(\.[0-9]{2})?$', num)
