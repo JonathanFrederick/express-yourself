@@ -24,3 +24,6 @@ def words(st, count=None):
             return count == len(new_st)
         else:
             return True
+
+def phone_number(num):
+    return re.match('^\(?[0-9]{3}\)?[. -]?[0-9]{3}[-.]?[0-9]{4}$', num)
