@@ -9,3 +9,6 @@ def binary_even(st):
 
 def hex(st):
     return re.match('^[0-9A-F]+$', st)
+
+def word(st):
+    return re.match('^[0-9a-zA-Z-]*[a-zA-Z]$', st)
