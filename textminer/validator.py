@@ -1,6 +1,8 @@
 import re
 
 
+
+
 def binary(st):
     return re.match('^(0|1)+$', st)
 
@@ -12,3 +14,13 @@ def hex(st):
 
 def word(st):
     return re.match('^[0-9a-zA-Z-]*[a-zA-Z]$', st)
+
+def words(st, count=None):
+    new_st = re.split('\s+', st)
+    if None in [word(w) for w in new_st]:
+        return False
+    else:
+        if count:
+            return count == len(new_st)
+        else:
+            return True
